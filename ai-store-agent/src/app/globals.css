@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: 14 16 26;
+  --foreground: 244 245 247;
+  --card: 20 22 36;
+  --card-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(74, 222, 128, 0.15), transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(129, 140, 248, 0.18), transparent 50%),
+    rgba(var(--background), 1);
+  color: rgb(var(--foreground));
+}
+
+.glass-panel {
+  background: rgba(17, 19, 32, 0.73);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(14px);
+}
+
+.scroll-shadow-y {
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+input[type="file"]::file-selector-button {
+  background-color: rgba(148, 163, 184, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: rgba(148, 163, 184, 0.35);
+}
